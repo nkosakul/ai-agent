@@ -1,2 +1,3 @@
-# ai-agent
-creatinga small AI Agent
+# AI Agent
+
+Small AI Agent
