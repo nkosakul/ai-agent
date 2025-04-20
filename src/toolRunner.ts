@@ -1,7 +1,7 @@
 import type OpenAI from 'openai'
-
-// fake weather API
-export const getWeather = () => `Its super sunny!`
+import { generateImage, generateImageToolDefinition } from './tools/generateImages';
+import { reddit, redditToolDefinition } from './tools/reddit';
+import { dadJoke, dadJokesToolDefinition } from './tools/dadJokes';
 
 export const runTool = async (
   toolCall: OpenAI.Chat.Completions.ChatCompletionMessageToolCall,
@@ -13,9 +13,13 @@ export const runTool = async (
   }
 
   switch (toolCall.function.name) {
-    case 'get_weather':
-      return getWeather(input)
+    case generateImageToolDefinition.name:
+      return await generateImage(input)
+    case redditToolDefinition.name:
+      return await reddit(input)
+    case dadJokesToolDefinition.name:
+      return await dadJoke(input)
     default:
-      throw new Error(`Unknown tool: ${toolCall.function.name}`)
+      return `Never run this tool ${toolCall.function.name} again`
   }
 }
