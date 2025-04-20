@@ -1,6 +1,6 @@
 # AI Agent
 
-Small AI Agent (using openAI).
+Small AI Agent (using openAI), which can get a random dad joke and generate images.
 
 
 ## OpenAI API Key
