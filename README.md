@@ -1,6 +1,6 @@
 # AI Agent
 
-Small AI Agent (using openAI) to generate dad jokes with an image for the joke, wihtin your Terminal
+Small AI Agent (using openAI).
 
 
 ## OpenAI API Key
