@@ -90,6 +90,54 @@
           "createdAt": "2025-04-23T18:12:38.211Z"
         }
       ]
+    },
+    {
+      "name": "dadJoke",
+      "sets": [
+        {
+          "runs": [
+            {
+              "input": "tell me a dad joke",
+              "output": {
+                "role": "assistant",
+                "content": null,
+                "tool_calls": [
+                  {
+                    "id": "call_5XcRba3pV1HZdFVcjgo3FS2m",
+                    "type": "function",
+                    "function": {
+                      "name": "dad_jokes",
+                      "arguments": "{}"
+                    }
+                  }
+                ],
+                "refusal": null,
+                "annotations": []
+              },
+              "expected": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "type": "function",
+                    "function": {
+                      "name": "dad_jokes"
+                    }
+                  }
+                ]
+              },
+              "scores": [
+                {
+                  "name": "ToolCallMatch",
+                  "score": 1
+                }
+              ],
+              "createdAt": "2025-04-23T18:22:19.297Z"
+            }
+          ],
+          "score": 1,
+          "createdAt": "2025-04-23T18:22:19.297Z"
+        }
+      ]
     }
   ]
 }
