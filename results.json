@@ -138,6 +138,128 @@
           "createdAt": "2025-04-23T18:22:19.297Z"
         }
       ]
+    },
+    {
+      "name": "allTools",
+      "sets": [
+        {
+          "runs": [
+            {
+              "input": "tell me something interesting from reddit",
+              "output": {
+                "role": "assistant",
+                "content": null,
+                "tool_calls": [
+                  {
+                    "id": "call_MIpu2IIAq0UgBh83GBTlQPr7",
+                    "type": "function",
+                    "function": {
+                      "name": "reddit",
+                      "arguments": "{}"
+                    }
+                  }
+                ],
+                "refusal": null,
+                "annotations": []
+              },
+              "expected": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "type": "function",
+                    "function": {
+                      "name": "reddit"
+                    }
+                  }
+                ]
+              },
+              "scores": [
+                {
+                  "name": "ToolCallMatch",
+                  "score": 1
+                }
+              ],
+              "createdAt": "2025-04-23T18:37:11.084Z"
+            },
+            {
+              "input": "generate an image of a mountain landscape",
+              "output": {
+                "role": "assistant",
+                "content": null,
+                "tool_calls": [
+                  {
+                    "id": "call_NV0CWQG9BxuQlZJiz54eVP3m",
+                    "type": "function",
+                    "function": {
+                      "name": "generate_image",
+                      "arguments": "{\"prompt\":\"A breathtaking mountain landscape featuring towering peaks, lush green valleys, and a clear blue sky. The scene includes a serene lake reflecting the mountains, with a few fluffy clouds drifting above. Wildflowers bloom in the foreground, adding vibrant colors to the natural beauty.\"}"
+                    }
+                  }
+                ],
+                "refusal": null,
+                "annotations": []
+              },
+              "expected": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "type": "function",
+                    "function": {
+                      "name": "generate_image"
+                    }
+                  }
+                ]
+              },
+              "scores": [
+                {
+                  "name": "ToolCallMatch",
+                  "score": 1
+                }
+              ],
+              "createdAt": "2025-04-23T18:37:11.085Z"
+            },
+            {
+              "input": "tell me a dad joke",
+              "output": {
+                "role": "assistant",
+                "content": null,
+                "tool_calls": [
+                  {
+                    "id": "call_hAquH05W3omC0EIJYYBoHmCo",
+                    "type": "function",
+                    "function": {
+                      "name": "dad_jokes",
+                      "arguments": "{}"
+                    }
+                  }
+                ],
+                "refusal": null,
+                "annotations": []
+              },
+              "expected": {
+                "role": "assistant",
+                "tool_calls": [
+                  {
+                    "type": "function",
+                    "function": {
+                      "name": "dad_jokes"
+                    }
+                  }
+                ]
+              },
+              "scores": [
+                {
+                  "name": "ToolCallMatch",
+                  "score": 1
+                }
+              ],
+              "createdAt": "2025-04-23T18:37:11.085Z"
+            }
+          ],
+          "score": 1,
+          "createdAt": "2025-04-23T18:37:11.085Z"
+        }
+      ]
     }
   ]
 }
